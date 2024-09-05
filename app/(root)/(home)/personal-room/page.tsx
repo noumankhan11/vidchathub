@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Home() {
+export default function PersonalRoom() {
   return (
     <section className="flex size-full flex-col gap-10 text-white ">
-      <h1>Home</h1>
+      <h1>Personal Room</h1>
     </section>
   );
 }
