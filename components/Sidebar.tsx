@@ -1,11 +1,12 @@
 "use client";
 import { sidebarLinks } from "@/constants";
 import { cn } from "@/lib/utils";
+import { Henny_Penny } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -15,7 +16,7 @@ export default function Sidebar() {
         {sidebarLinks.map((link) => {
           const isActive =
             pathname === link.route ||
-            pathname.startsWith(link.route);
+            pathname.startsWith(`${link.route}/`);
 
           return (
             <Link
