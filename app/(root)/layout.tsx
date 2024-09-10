@@ -1,3 +1,4 @@
+import StreamVideoProvider from "@/providers/StreamClientProvider";
 import React, { ReactNode } from "react";
 
 export default function RootLayout({
@@ -7,7 +8,9 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <main>{children}</main>
+      <main>
+        <StreamVideoProvider>{children}</StreamVideoProvider>
+      </main>
     </>
   );
 }
