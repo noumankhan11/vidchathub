@@ -1,5 +1,6 @@
 import StreamVideoProvider from "@/providers/StreamClientProvider";
 import React, { ReactNode } from "react";
+import { Toaster } from "@/components/ui/toaster";
 
 export default function RootLayout({
   children,
@@ -11,6 +12,7 @@ export default function RootLayout({
       <main>
         <StreamVideoProvider>{children}</StreamVideoProvider>
       </main>
+      <Toaster />
     </>
   );
 }
